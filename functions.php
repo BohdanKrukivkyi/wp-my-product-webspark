@@ -26,6 +26,16 @@ if ( class_exists( 'WooCommerce' ) ) {
 		add_rewrite_endpoint( 'my-products', EP_ROOT | EP_PAGES );
 	}
 
+	register_activation_hook(__FILE__, 'wp_my_product_activate');
+	register_deactivation_hook(__FILE__, 'wp_my_product_deactivate');
+	function wp_my_product_activate() {
+		wp_my_product_add_endpoints();
+		flush_rewrite_rules();
+	}
+	function wp_my_product_deactivate() {
+		flush_rewrite_rules();
+	}
+
 	// Add page "Add Product"
 	add_action( 'woocommerce_account_add-product_endpoint', 'wp_my_product_add_page_add' );
 	function wp_my_product_add_page_add() {
