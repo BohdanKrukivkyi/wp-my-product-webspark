@@ -1,10 +1,9 @@
 <?php
 /*
-Plugin Name: WP My Product Webspark
+Plugin Name: WP My Product
 Description: Плагін для створення і редагування продуктів через сторінку My Account.
 Version: 1.0
 Author: Bohdan
-Text Domain: wp-my-product-webspark
 */
 
 if ( ! defined( 'ABSPATH' ) ) {

@@ -1,4 +1,4 @@
-# WP My Product Webspark
+# WP My Product
 
 **Contributors:** Bohdan
 
